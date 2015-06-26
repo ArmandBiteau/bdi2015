@@ -36,6 +36,9 @@ class Application extends Slim
             $this->handleException($e);
         });
 
+
+
+
         // Config
         $this->configDirectory = __DIR__ . '/../../' . $configDirectory;
         $this->config = $this->initConfig();
@@ -45,10 +48,12 @@ class Application extends Slim
 
         /*******************************/
 
-        /****  HERE MY CLASSES  ********/
+        /****  HERE ARE MY CLASSES  ****/
 
 
-        // /features
+
+        /****  FEATURES  ***************/
+
         $this->get('/features', function () {
 
             // Here I get dom datas
@@ -61,16 +66,23 @@ class Application extends Slim
 
         $this->get('/features/:id', function ($id) {
 
+            // Here I get dom datas
             $features = new Features($this->config['features']);
 
             $feature = $features->getFeature($id);
             if ($feature === null) {
                 return $this->notFound();
             }
+
+            // Here I send to front
             $this->response->headers->set('Content-Type', 'application/json');
             $this->response->setBody(json_encode($feature));
         });
 
+
+        /****  OTHER STUFFS  ***********/
+
+        /* ... */
 
 
         /****  END OF MY CLASSES  ******/
