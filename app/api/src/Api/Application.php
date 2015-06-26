@@ -40,15 +40,29 @@ class Application extends Slim
         $this->configDirectory = __DIR__ . '/../../' . $configDirectory;
         $this->config = $this->initConfig();
 
+
+
+
+        /*******************************/
+
+        /****  HERE MY CLASSES  ********/
+
+
         // /features
         $this->get('/features', function () {
+
+            // Here I get dom datas
             $features = new Features($this->config['features']);
+
+            // Here I send to front ;-)
             $this->response->headers->set('Content-Type', 'application/json');
             $this->response->setBody(json_encode($features->getFeatures()));
         });
 
         $this->get('/features/:id', function ($id) {
+
             $features = new Features($this->config['features']);
+
             $feature = $features->getFeature($id);
             if ($feature === null) {
                 return $this->notFound();
@@ -56,6 +70,15 @@ class Application extends Slim
             $this->response->headers->set('Content-Type', 'application/json');
             $this->response->setBody(json_encode($feature));
         });
+
+
+
+        /****  END OF MY CLASSES  ******/
+
+        /*******************************/
+
+
+
     }
 
     public function handleNotFound()

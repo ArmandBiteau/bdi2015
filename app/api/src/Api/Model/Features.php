@@ -6,11 +6,6 @@ class Features
 {
     protected $features;
 
-    protected function getHref($id)
-    {
-        return './api/features/' . $id;
-    }
-
     public function __construct($features)
     {
         $this->features = $features;
@@ -23,7 +18,7 @@ class Features
             $features[] = array(
                 'id' => $id,
                 'name' => $feature['name'],
-                'href' => $this->getHref($id),
+                'description' => $feature['description']
             );
         }
         return $features;
@@ -36,8 +31,7 @@ class Features
         }
         return array_merge(
             array('id' => $id),
-            $this->features[$id],
-            array('href' => $this->getHref($id))
+            $this->features[$id]
         );
     }
 }
