@@ -36,26 +36,61 @@ class Application extends Slim
             $this->handleException($e);
         });
 
+
+
+
         // Config
         $this->configDirectory = __DIR__ . '/../../' . $configDirectory;
         $this->config = $this->initConfig();
 
-        // /features
+
+
+
+        /*******************************/
+
+        /****  HERE ARE MY CLASSES  ****/
+
+
+
+        /****  FEATURES  ***************/
+
         $this->get('/features', function () {
+
+            // Here I get dom datas
             $features = new Features($this->config['features']);
+
+            // Here I send to front ;-)
             $this->response->headers->set('Content-Type', 'application/json');
             $this->response->setBody(json_encode($features->getFeatures()));
         });
 
         $this->get('/features/:id', function ($id) {
+
+            // Here I get dom datas
             $features = new Features($this->config['features']);
+
             $feature = $features->getFeature($id);
             if ($feature === null) {
                 return $this->notFound();
             }
+
+            // Here I send to front
             $this->response->headers->set('Content-Type', 'application/json');
             $this->response->setBody(json_encode($feature));
         });
+
+
+        /****  OTHER STUFFS  ***********/
+
+        /* ... */
+
+
+        /****  END OF MY CLASSES  ******/
+
+        /*******************************/
+
+
+
     }
 
     public function handleNotFound()

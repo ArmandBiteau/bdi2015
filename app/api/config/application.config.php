@@ -1,19 +1,17 @@
 <?php
 return array(
     'features' => array(
-        'html5-boilerplate' => array(
-            'name' => 'HTML5 Boilerplate',
-            'description' => 'HTML5 Boilerplate is a professional front-end template'
-                . ' for building fast, robust, and adaptable web apps or sites.',
+        'f1' => array(
+            'name' => 'Feature number one sisi',
+            'description' => 'Description of the first feature'
         ),
-        'angular' => array(
-            'name' => 'Angular',
-            'description' => 'AngularJS is a toolset for building the framework most'
-                . ' suited to your application development.',
+        'f2' => array(
+            'name' => 'Feature 2',
+            'description' => ''
         ),
-        'karma' => array(
-            'name' => 'Karma',
-            'description' => 'Spectacular Test Runner for JavaScript.',
+        'f3' => array(
+            'name' => 'Feature 3',
+            'description' => 'Did you managed that feature 2 doesn\'t have description ?',
         ),
     ),
 );
