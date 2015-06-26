@@ -17,7 +17,7 @@ angular
     'ngSanitize',
     'ngTouch'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/features', {
         templateUrl: 'views/features.html',
@@ -34,4 +34,7 @@ angular
       .otherwise({
         redirectTo: '/features'
       });
+
+      // use the HTML5 History API
+      $locationProvider.html5Mode(true);
   });
