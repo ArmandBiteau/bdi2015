@@ -14,6 +14,10 @@ Run the platform
 > - Front-End is compiled from **Sass**, with **GruntJS**.
 > - **Bower** is used for external components.
 
+> **Note :**
+
+> - The **php** **API** is at : **app/api/src/Api**
+
 
 #### <i class="icon-download"></i> Install dependencies
 
