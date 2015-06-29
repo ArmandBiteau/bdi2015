@@ -7,8 +7,8 @@
  * # bdiNav
  */
 angular.module('bdi2015App')
-  .directive('bdiNav', function () {
+    .directive('bdiNav', function () {
     return {
-      templateUrl: 'views/nav.html'
+        templateUrl: 'views/nav.html'
     };
-  });
+});

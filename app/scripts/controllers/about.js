@@ -8,6 +8,6 @@
  * Controller of the bdi2015App
  */
 angular.module('bdi2015App')
-  .controller('AboutCtrl', function () {
+    .controller('AboutCtrl', function () {
 
-  });
+});
