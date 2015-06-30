@@ -4,7 +4,7 @@
 $color: #536DFE;
 
 main{
-    margin-top: -40vh;
+    margin-top: -17em;
 }
 
 section{
@@ -13,8 +13,8 @@ section{
 }
 
 header{
-    background: blue;
     position: relative;
+    transition: all 1s;
     width: 100vw;
     background: $color;
     height: 70px;
@@ -55,7 +55,8 @@ header{
 .bg-header{
     background: $color;
     position: relative;
-    height: 50vh;
+    height: 20em;
+    transition: all 1s;
 }
 
 
