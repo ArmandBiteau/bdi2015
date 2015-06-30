@@ -19,6 +19,10 @@ angular
     ])
     .config(function ($routeProvider) {
     $routeProvider
+        .when('/', {
+          templateUrl: 'views/home.html',
+          controller: 'HomeCtrl'
+        })
         .when('/features', {
             templateUrl: 'views/features.html',
             controller: 'FeaturesCtrl'
@@ -32,7 +36,7 @@ angular
             controller: 'AboutCtrl'
         })
         .otherwise({
-            redirectTo: '/features'
+            redirectTo: '/'
         });
 
         // use the HTML5 History API

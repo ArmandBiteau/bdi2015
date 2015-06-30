@@ -1,47 +1,91 @@
 // bower:scss
 // endbower
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+$color: #536DFE;
+
+main{
+    margin-top: -40vh;
 }
 
-/* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+section{
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+header{
+    background: blue;
+    position: relative;
+    width: 100vw;
+    background: $color;
+    height: 70px;
+    h3{
+        float: left;
+        margin-left: 4.4%;
+        a{
+            text-decoration: none;
+            color: #FFF;
+        }
+    }
+    nav{
+        float: right;
+        padding-right: 4.4%;
+        ul{
+            float: right;
+            margin-right: 0;
+            width: 100%;
+            li{
+                float: left;
+                margin-left: 1em;
+                color: #FFF;
+                display: inline-block;
+                a{
+                    color: #FFF;
+                    transition: all 0.3s;
+                    &:hover{
+                        opacity: 0.7;
+                        transition: all 0.3s;
+                    }
+                }
+            }
+        }
+    }
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
 
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
+.bg-header{
+    background: $color;
+    position: relative;
+    height: 50vh;
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+
+.title-page{
+    margin-bottom: -1.5em;
+    h2{
+        display: inline-block;
+        color: #FFF;
+    }
+    nav{
+        margin-top: 1.2em;
+        float: right;
+        display: inline-block;
+        p{
+            color: #FFF;
+        }
+        a{
+            color: #FFF!important;
+            opacity: 0.7;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
+
+
+
+.featured-list{
+    padding: 0;
+    padding-bottom: 3em;
 }

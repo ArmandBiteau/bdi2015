@@ -8,16 +8,17 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css(.) styles/vendor.css -->
         <!-- bower:css -->
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
         <!-- endbower -->
         <!-- endbuild -->
+        <link rel="stylesheet" href="styles/components.css">
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
+
         <!-- endbuild -->
 
         <base href="/" />
     </head>
-    <body ng-app="bdi2015App">
+    <body ng-app="bdi2015App" class="">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -25,21 +26,15 @@
 
     <header class="header" ng-controller="NavCtrl">
         <nav bdi-nav></nav>
-        <h3 class="text-muted">bdi2015</h3>
+        <h3 class="text-muted"><a ng-href="#/">BDI</a></h3>
     </header>
 
+    <div class="bg-header"></div>
 
 
-    <div class="container">
+    <main>
         <div ng-view=""></div>
-    </div>
-
-
-    <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> BDI 2015</p>
-    </div>
-
-
+    </main>
 
 
 
@@ -50,10 +45,8 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/json3/lib/json3.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
@@ -72,6 +65,7 @@
 
 
     <script src="scripts/directives/bdinav.js"></script>
+    <script src="scripts/controllers/home.js"></script>
     <!-- endbuild -->
 </body>
 </html>
