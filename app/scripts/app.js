@@ -9,32 +9,36 @@
  * Main module of the application.
  */
 angular
-  .module('bdi2015App', [
+    .module('bdi2015App', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ])
-  .config(function ($routeProvider, $locationProvider) {
+    ])
+    .config(function ($routeProvider) {
     $routeProvider
-      .when('/features', {
-        templateUrl: 'views/features.html',
-        controller: 'FeaturesCtrl'
-      })
-      .when('/features/:id', {
-        templateUrl: 'views/feature.html',
-        controller: 'FeatureCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .otherwise({
-        redirectTo: '/features'
-      });
+        .when('/', {
+          templateUrl: 'views/home.html',
+          controller: 'HomeCtrl'
+        })
+        .when('/features', {
+            templateUrl: 'views/features.html',
+            controller: 'FeaturesCtrl'
+        })
+        .when('/features/:id', {
+            templateUrl: 'views/feature.html',
+            controller: 'FeatureCtrl'
+        })
+        .when('/about', {
+            templateUrl: 'views/about.html',
+            controller: 'AboutCtrl'
+        })
+        .otherwise({
+            redirectTo: '/'
+        });
 
-      // use the HTML5 History API
-      //$locationProvider.html5Mode(true);
-  });
+        // use the HTML5 History API
+        //$locationProvider.html5Mode(true);
+    });

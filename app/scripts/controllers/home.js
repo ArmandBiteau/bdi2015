@@ -2,12 +2,14 @@
 
 /**
  * @ngdoc function
- * @name bdi2015App.controller:AboutCtrl
+ * @name bdi2015App.controller:HomeCtrl
  * @description
- * # AboutCtrl
+ * # HomeCtrl
  * Controller of the bdi2015App
  */
 angular.module('bdi2015App')
-    .controller('AboutCtrl', function () {
+  .controller('HomeCtrl', function () {
 
-});
+
+
+  });
