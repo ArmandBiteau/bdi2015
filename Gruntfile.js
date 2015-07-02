@@ -52,24 +52,14 @@ module.exports = function (grunt) {
 
     ngdocs: {
       options: {
-        dest: 'docs',
+        dest: 'dist/docs',
         scripts: ['app/scripts/**/*.js'],
         html5Mode: true,
-        startPage: '/',
         title: "BDI2015 Documentation",
         //image: "path/to/my/image.png",
         //imageLink: "http://my-domain.com",
-        //titleLink: "/api",
         inlinePartials: true,
         bestMatch: true,
-        //analytics: {
-        //      account: 'UA-08150815-0'
-        //},
-        //discussions: {
-        //      shortName: 'my',
-        //      url: 'http://my-domain.com',
-        //      dev: false
-        //}
       }
     },
 
@@ -525,6 +515,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('build', [
+    'ngdocs',
     'clean:dist',
     'shell:phpUpdate',
     'wiredep',
@@ -539,8 +530,7 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
-    'htmlmin',
-    'ngdocs'
+    'htmlmin'
   ]);
 
   grunt.registerTask('default', [
