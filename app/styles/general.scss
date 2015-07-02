@@ -25,7 +25,7 @@ header{
         background: $color;
         color: #FFF;
         float: right;
-        margin-right: -400px;
+        margin-right: -300px;
         transition: all 0.5s;
         a{
             font-weight: 400;
@@ -78,15 +78,15 @@ header{
     &.scrolled{
         background: #FFF;
         color: $color;
+        border-bottom: 1px rgba(0,0,0,.3);
         nav{
-            padding-right: 2em;
             ul li a{
                 color: $color;
             }
         }
         .connect-header{
             margin-right: 0;
-            transition: all 0.5s;
+            transition: all 0.5s ease-in-out;
         }
         h3{
             a{
