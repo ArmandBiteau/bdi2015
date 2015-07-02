@@ -1,0 +1,137 @@
+$color: #536DFE;
+
+
+main{
+    margin-top: -17em;
+    min-height: 2000px;
+}
+section{
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 74px;
+    z-index: 2;
+    transition: all 0.3s;
+
+    .connect-header{
+        position: relative;
+        display: inline-block;
+        height: 100%;
+        background: $color;
+        color: #FFF;
+        float: right;
+        margin-right: -400px;
+        transition: all 0.5s;
+        a{
+            font-weight: 400;
+            font-family: 'Roboto Condensed', Helvetica, sans-serif;
+            color: #FFF;
+            padding: 32px;
+            padding-left: 2.5em;
+            padding-right: 2.5em;
+            line-height: 74px;
+            text-decoration: none;
+        }
+        &:hover{
+            transition: background 0.3s;
+            background: lighten( $color, 10% );
+        }
+    }
+    h3{
+        float: left;
+        margin-left: 4.4%;
+        a{
+            text-decoration: none;
+            color: #FFF;
+        }
+    }
+    nav{
+        float: right;
+        height: 100%;
+        display: inline-block;
+        padding-right: 4.4%;
+        ul{
+            margin-right: 0;
+            padding-top: 1.5em;
+            width: 100%;
+            li{
+                float: left;
+                margin-left: 1em;
+                color: #FFF;
+                display: inline-block;
+                a{
+                    color: #FFF;
+                    transition: all 0.3s;
+                    &:hover{
+                        opacity: 0.7;
+                        transition: all 0.3s;
+                    }
+                }
+            }
+        }
+    }
+    &.scrolled{
+        background: #FFF;
+        color: $color;
+        nav{
+            padding-right: 2em;
+            ul li a{
+                color: $color;
+            }
+        }
+        .connect-header{
+            margin-right: 0;
+            transition: all 0.5s;
+        }
+        h3{
+            a{
+                color: $color;
+            }
+        }
+    }
+}
+
+
+.bg-header{
+    background: $color;
+    position: relative;
+    height: 20em;
+    transition: all 1s;
+    z-index: 0;
+}
+
+
+.title-page{
+    margin-bottom: -1.5em;
+    h2{
+        display: inline-block;
+        color: #FFF;
+        text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    }
+    nav{
+        margin-top: 1.2em;
+        float: right;
+        display: inline-block;
+        p{
+            color: #FFF;
+        }
+        a{
+            color: #FFF!important;
+            opacity: 0.7;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+.featured-list{
+    padding: 0;
+    padding-bottom: 3em;
+}

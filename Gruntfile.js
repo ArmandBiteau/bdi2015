@@ -49,6 +49,32 @@ module.exports = function (grunt) {
     // Project settings
     yeoman: appConfig,
 
+
+    ngdocs: {
+      options: {
+        dest: 'docs',
+        scripts: ['app/scripts/**/*.js'],
+        html5Mode: true,
+        startPage: '/',
+        title: "BDI2015 Documentation",
+        //image: "path/to/my/image.png",
+        //imageLink: "http://my-domain.com",
+        //titleLink: "/api",
+        inlinePartials: true,
+        bestMatch: true,
+        //analytics: {
+        //      account: 'UA-08150815-0'
+        //},
+        //discussions: {
+        //      shortName: 'my',
+        //      url: 'http://my-domain.com',
+        //      dev: false
+        //}
+      }
+    },
+
+
+
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -513,7 +539,8 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'ngdocs'
   ]);
 
   grunt.registerTask('default', [

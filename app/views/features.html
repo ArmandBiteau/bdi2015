@@ -1,35 +1,39 @@
-<section class="title-page">
-    <div class="container">
-        <h2 class="">Features</h2>
-        <nav class="breadcrumbs">
-            <p><a ng-href="#/" class="breadcrumbs__link">Home</a> / <a ng-href="#/features" class="breadcrumbs__link">Features</a></p>
-        </nav>
-    </div>
-</section>
+<div class="bg-header"></div>
 
+<main class="features">
 
+    <section class="title-page">
+        <div class="container">
+            <h2 class="">Features</h2>
+            <nav class="breadcrumbs">
+                <p><a ng-href="#/" class="breadcrumbs__link">Home</a> / <a ng-href="#/features" class="breadcrumbs__link">Features</a></p>
+            </nav>
+        </div>
+    </section>
 
-<section class="styleguide__featured-section">
-    <div class="featured-section">
-        <div class="container-medium">
-            <ul class="featured-list">
+    <section class="styleguide__featured-section">
+        <div class="featured-section">
+            <div class="container-medium">
+                <ul class="featured-list">
 
-                <li class="featured-list__item clear" ng-repeat="thing in awesomeThings">
-                    <div class="container-small">
-                        <div class="featured-list__content g--half">
-                            <h3>{{thing.name}}</h3>
-                            <p>{{thing.description}}</p>
-                            <a ng-href="#/features/{{thing.id}}" class="cta--primary">View More</a>
-                        </div>
-                        <div class="featured-list__img-wrapper g--half g--last">
-                            <div class="featured-list__img">
-                                <img src="images/icons/placeholder--small.png" alt="small image placeholder example">
+                    <li class="featured-list__item clear" ng-repeat="thing in awesomeThings">
+                        <div class="container-small">
+                            <div class="featured-list__content g--half">
+                                <h3>{{thing.name}}</h3>
+                                <p>{{thing.description}}</p>
+                                <a ng-href="#/features/{{thing.id}}" class="cta--primary">View More</a>
+                            </div>
+                            <div class="featured-list__img-wrapper g--half g--last">
+                                <div class="featured-list__img">
+                                    <img src="images/icons/placeholder--small.png" alt="small image placeholder example">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
+                    </li>
 
-            </ul>
+                </ul>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+</main>
