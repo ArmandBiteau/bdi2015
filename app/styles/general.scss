@@ -1,8 +1,15 @@
-$color: #536DFE;
+$color: #3372df;
 
+html,body,#view{
+    height: 100%;
+}
+
+.white{
+    color: #FFF;
+}
 
 main{
-    margin-top: -17em;
+    margin-top: 0;
     min-height: 2000px;
 }
 section{
@@ -17,6 +24,7 @@ header{
     height: 74px;
     z-index: 2;
     transition: all 0.3s;
+    border-bottom: 1px solid transparent;
 
     .connect-header{
         position: relative;
@@ -45,6 +53,7 @@ header{
     h3{
         float: left;
         margin-left: 4.4%;
+        padding-top: 0.9em;
         a{
             text-decoration: none;
             color: #FFF;
@@ -65,7 +74,7 @@ header{
                 color: #FFF;
                 display: inline-block;
                 a{
-                    color: #FFF;
+                    color: #FFF!important;
                     transition: all 0.3s;
                     &:hover{
                         opacity: 0.7;
@@ -78,10 +87,11 @@ header{
     &.scrolled{
         background: #FFF;
         color: $color;
-        border-bottom: 1px rgba(0,0,0,.3);
+        transition: all 0.3s;
+        border-bottom: 1px solid #e7e7e7;
         nav{
             ul li a{
-                color: $color;
+                color: $color!important;
             }
         }
         .connect-header{
@@ -96,18 +106,17 @@ header{
     }
 }
 
-
 .bg-header{
     background: $color;
-    position: relative;
-    height: 20em;
+    position: absolute;
+    height: 24em;
+    width: 100%;
     transition: all 1s;
     z-index: 0;
 }
 
-
 .title-page{
-    margin-bottom: -1.5em;
+    padding-top: 8em;
     h2{
         display: inline-block;
         color: #FFF;
@@ -129,7 +138,6 @@ header{
         }
     }
 }
-
 
 .featured-list{
     padding: 0;
