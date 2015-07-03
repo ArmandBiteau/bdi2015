@@ -55,7 +55,7 @@ module.exports = function (grunt) {
         dest: 'dist/docs',
         scripts: ['app/scripts/**/*.js'],
         html5Mode: true,
-        title: "BDI2015 Documentation",
+        title: 'BDI2015 Documentation',
         //image: "path/to/my/image.png",
         //imageLink: "http://my-domain.com",
         inlinePartials: true,

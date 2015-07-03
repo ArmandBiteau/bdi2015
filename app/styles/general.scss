@@ -16,6 +16,33 @@ section{
     padding-top: 2em;
     padding-bottom: 2em;
 }
+
+#facebookLogin{
+    .modal{
+        display: none;
+    }
+    a{
+        font-weight: 400;
+        font-family: 'Roboto Condensed', Helvetica, sans-serif;
+        color: #FFF;
+        padding: 25px;
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+        //line-height: 71px;
+        border: none;
+        background: none;
+        text-decoration: none;
+        outline: 0;
+        box-shadow: none;
+        &:focus {
+            outline: 0;
+            box-shadow: none;
+        }
+        &::before{
+            border-right: none;
+        }
+    }
+}
 header{
     position: fixed;
     top: 0;
@@ -33,18 +60,9 @@ header{
         background: $color;
         color: #FFF;
         float: right;
-        margin-right: -300px;
+        margin-right: -350px;
         transition: all 0.3s;
-        a{
-            font-weight: 400;
-            font-family: 'Roboto Condensed', Helvetica, sans-serif;
-            color: #FFF;
-            padding: 32px;
-            padding-left: 2.5em;
-            padding-right: 2.5em;
-            line-height: 74px;
-            text-decoration: none;
-        }
+
         &:hover{
             transition: background 0.3s;
             background: lighten( $color, 10% );
@@ -53,7 +71,7 @@ header{
     h3{
         float: left;
         margin-left: 4.4%;
-        padding-top: 0.9em;
+        //padding-top: 0.9em;
         a{
             text-decoration: none;
             color: #FFF;

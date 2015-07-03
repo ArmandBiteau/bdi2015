@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'facebookUtils'
     ])
     .config(function ($routeProvider) {
     $routeProvider
@@ -29,7 +30,8 @@ angular
         })
         .when('/features/:id', {
             templateUrl: 'views/feature.html',
-            controller: 'FeatureCtrl'
+            controller: 'FeatureCtrl',
+            needAuth: true
         })
         .when('/about', {
             templateUrl: 'views/about.html',
@@ -45,4 +47,11 @@ angular
 
         // use the HTML5 History API
         //$locationProvider.html5Mode(true);
+    })
+    .constant('facebookConfigSettings', {
+        'appID' : '704895206321216',
+        'routingEnabled' : true,
+        cookie: true,
+        status: true,
+        xfbml: true
     });
