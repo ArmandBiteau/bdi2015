@@ -38,8 +38,12 @@ angular
             controller: 'AboutCtrl'
         })
         .when('/sample', {
-          templateUrl: 'views/sample.html',
-          controller: 'SampleCtrl'
+            templateUrl: 'views/sample.html',
+            controller: 'SampleCtrl'
+        })
+        .when('/error', {
+            templateUrl: 'views/error.html',
+            controller: 'ErrorCtrl'
         })
         .otherwise({
             redirectTo: '/'
@@ -53,5 +57,6 @@ angular
         'routingEnabled' : true,
         cookie: true,
         status: true,
-        xfbml: true
+        xfbml: true,
+        loginPath: '/error'
     });

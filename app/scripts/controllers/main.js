@@ -10,6 +10,8 @@
 angular.module('bdi2015App')
     .controller('MainCtrl', function ($rootScope, $scope, facebookUser) {
 
+        $scope.error = 'You need to be logged to access this page !';
+        
         $rootScope.loggedInUser = {};
         $rootScope.userGroups = {};
 
