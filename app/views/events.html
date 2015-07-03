@@ -11,29 +11,37 @@
         </div>
     </section>
 
-    <section class="styleguide__featured-section">
-        <div class="featured-section">
-            <div class="container-medium">
-                <ul class="featured-list">
-
-                    <li class="featured-list__item clear" ng-repeat="event in events">
-                        <div class="container-small">
-                            <div class="featured-list__content g--half">
-                                <h3>{{event.name}}</h3>
-                                <p>{{event.description}}</p>
-                                <a ng-href="#/events/{{event.id}}" class="cta--primary">View More</a>
-                            </div>
-                            <div class="featured-list__img-wrapper g--half g--last">
-                                <div class="featured-list__img">
-                                    <img src="images/icons/placeholder--small.png" alt="small image placeholder example">
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                </ul>
+    <section class="subtitle-page">
+        <div class="container">
+            <div class="content-subtitle">
+                <h4 class="">Infos</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
         </div>
     </section>
 
+    <section class="">
+        <div class="container">
+            <ul class="featured-list">
+                <li class="featured-list__item clear" ng-repeat="event in events">
+                    <div class="container">
+                        <div class="featured-list__content g--half">
+                            <h3>{{event.name}}</h3>
+                            <p>{{event.description}}</p>
+                            <a ng-href="#/events/{{event.id}}" class="cta--primary">View More</a>
+                        </div>
+                        <div class="featured-list__img-wrapper g--half g--last">
+                            <div class="featured-list__img">
+                                <img src="images/icons/placeholder--small.png" alt="small image placeholder example">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
 </main>
+
+<script type="text/javascript" src="/scripts/webkit.js"></script>
