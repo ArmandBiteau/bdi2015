@@ -24,14 +24,9 @@ angular
           templateUrl: 'views/home.html',
           controller: 'HomeCtrl'
         })
-        .when('/features', {
-            templateUrl: 'views/features.html',
-            controller: 'FeaturesCtrl'
-        })
-        .when('/features/:id', {
-            templateUrl: 'views/feature.html',
-            controller: 'FeatureCtrl',
-            needAuth: true
+        .when('/error', {
+            templateUrl: 'views/error.html',
+            controller: 'ErrorCtrl'
         })
         .when('/about', {
             templateUrl: 'views/about.html',
@@ -39,11 +34,18 @@ angular
         })
         .when('/sample', {
             templateUrl: 'views/sample.html',
-            controller: 'SampleCtrl'
+            controller: 'SampleCtrl',
+            needAuth: true
         })
-        .when('/error', {
-            templateUrl: 'views/error.html',
-            controller: 'ErrorCtrl'
+        .when('/events', {
+            templateUrl: 'views/events.html',
+            controller: 'EventsCtrl',
+            needAuth: true
+        })
+        .when('/events/:id', {
+            templateUrl: 'views/event.html',
+            controller: 'EventCtrl',
+            needAuth: true
         })
         .otherwise({
             redirectTo: '/'

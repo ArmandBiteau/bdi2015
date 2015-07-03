@@ -8,7 +8,7 @@
  * Controller of the bdi2015App
  */
 angular.module('bdi2015App')
-  .controller('ErrorCtrl', function ($scope) {
+  .controller('ErrorCtrl', function () {
 
 
   });

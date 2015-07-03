@@ -1,12 +1,12 @@
 <div class="bg-header"></div>
 
-<main class="features">
+<main class="events">
 
     <section class="title-page">
         <div class="container">
-            <h2 class="">Features</h2>
+            <h2 class="">Next events</h2>
             <nav class="breadcrumbs">
-                <p><a ng-href="#/" class="breadcrumbs__link">Home</a> / <a ng-href="#/features" class="breadcrumbs__link">Features</a></p>
+                <p><a ng-href="#/" class="breadcrumbs__link">Home</a> / <a ng-href="#/events" class="breadcrumbs__link">Events</a></p>
             </nav>
         </div>
     </section>
@@ -16,12 +16,12 @@
             <div class="container-medium">
                 <ul class="featured-list">
 
-                    <li class="featured-list__item clear" ng-repeat="thing in awesomeThings">
+                    <li class="featured-list__item clear" ng-repeat="event in events">
                         <div class="container-small">
                             <div class="featured-list__content g--half">
-                                <h3>{{thing.name}}</h3>
-                                <p>{{thing.description}}</p>
-                                <a ng-href="#/features/{{thing.id}}" class="cta--primary">View More</a>
+                                <h3>{{event.name}}</h3>
+                                <p>{{event.description}}</p>
+                                <a ng-href="#/events/{{event.id}}" class="cta--primary">View More</a>
                             </div>
                             <div class="featured-list__img-wrapper g--half g--last">
                                 <div class="featured-list__img">

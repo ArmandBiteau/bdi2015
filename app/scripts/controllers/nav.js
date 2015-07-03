@@ -11,9 +11,9 @@ angular.module('bdi2015App')
     .controller('NavCtrl', function ($scope, $location) {
         $scope.pages = [
         {
-            id: 'features',
-            title: 'Features',
-            url: '#/features'
+            id: 'events',
+            title: 'Events',
+            url: '#/events'
         },
         {
             id: 'about',

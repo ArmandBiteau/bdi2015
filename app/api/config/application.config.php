@@ -1,17 +1,17 @@
 <?php
 return array(
-    'features' => array(
-        'f1' => array(
-            'name' => 'Feature number one sisi',
-            'description' => 'Description of the first feature'
+    'events' => array(
+        'e1' => array(
+            'name' => 'Event number one',
+            'description' => 'Description of the first event'
         ),
-        'f2' => array(
-            'name' => 'Feature 2',
+        'e2' => array(
+            'name' => 'Event 2',
             'description' => ''
         ),
-        'f3' => array(
-            'name' => 'Feature 3',
-            'description' => 'Did you managed that feature 2 doesn\'t have description ?',
+        'e3' => array(
+            'name' => 'Event 3',
+            'description' => 'Did you managed that event 2 doesn\'t have description ?',
         ),
     ),
 );

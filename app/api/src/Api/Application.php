@@ -2,7 +2,9 @@
 
 namespace Api;
 
-use Api\Model\Features;
+use Api\Model\Events;
+
+
 use \Slim\Slim;
 use \Exception;
 
@@ -52,31 +54,31 @@ class Application extends Slim
 
 
 
-        /****  FEATURES  ***************/
+        /****  EVENTS  ***************/
 
-        $this->get('/features', function () {
+        $this->get('/events', function () {
 
             // Here I get dom datas
-            $features = new Features($this->config['features']);
+            $events = new Events($this->config['events']);
 
             // Here I send to front ;-)
             $this->response->headers->set('Content-Type', 'application/json');
-            $this->response->setBody(json_encode($features->getFeatures()));
+            $this->response->setBody(json_encode($events->getEvents()));
         });
 
-        $this->get('/features/:id', function ($id) {
+        $this->get('/events/:id', function ($id) {
 
             // Here I get dom datas
-            $features = new Features($this->config['features']);
+            $events = new Events($this->config['events']);
 
-            $feature = $features->getFeature($id);
-            if ($feature === null) {
+            $event = $events->getEvent($id);
+            if ($event === null) {
                 return $this->notFound();
             }
 
             // Here I send to front
             $this->response->headers->set('Content-Type', 'application/json');
-            $this->response->setBody(json_encode($feature));
+            $this->response->setBody(json_encode($event));
         });
 
 

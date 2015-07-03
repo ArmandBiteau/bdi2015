@@ -1,8 +1,7 @@
 $color: #3372df;
 
 .home-header{
-    background: url('../images/home-cover2.jpg') no-repeat;
-    background-size: cover;
+    background: rgba($color, 0.3);
     height: 100%;
 }
 
@@ -11,6 +10,18 @@ $color: #3372df;
     .title-home{
         height: 100vh;
         max-height: 24em;
+        &::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 1;
+            width: 100%;
+            height: 100%;
+            background: url('../images/home-cover2.jpg') no-repeat;
+            background-size: cover;
+            z-index: -1;
+        }
         .container{
             margin-top: -2em;
             height: 100vh;
